@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soham Ghosh_23BPS1146</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<!DOCTYPE html> <!-- Defines document type as HTML5 -->
+<html lang="en"> <!-- Root element with English language -->
+<head> <!-- Container for metadata -->
+    <meta charset="UTF-8"> <!-- Sets character encoding to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes page responsive -->
+    <title>Soham Ghosh - Software Engineering Portfolio</title> <!-- Sets browser tab title -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Imports Font Awesome icons -->
     <style>
         :root {
             --background-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
@@ -14,704 +14,705 @@
             --soft-shadow: rgba(0, 0, 0, 0.1);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        * { /* Universal selector targeting all elements */
+            margin: 0; /* Removes default margin */
+            padding: 0; /* Removes default padding */
+            box-sizing: border-box; /* Includes padding and border in element width */
         }
 
-        body {
-            font-family: 'Inter', 'Arial', sans-serif;
-            background: var(--background-gradient);
-            color: var(--text-primary);
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            padding: 2rem 1rem;
+        body { /* Styles for body element */
+            font-family: 'Inter', 'Arial', sans-serif; /* Sets font family with fallbacks */
+            background: var(--background-gradient); /* Applies background gradient */
+            color: var(--text-primary); /* Sets text color */
+            line-height: 1.6; /* Sets line height for readability */
+            min-height: 100vh; /* Sets minimum height to full viewport height */
+            display: flex; /* Enables flexbox layout */
+            justify-content: center; /* Centers content horizontally */
+            padding: 2rem 1rem; /* Adds padding around content */
         }
 
-        .resume-container {
-            width: 100%;
-            max-width: 900px;
-            background: transparent;
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
+        .resume-container { /* Styles for main container */
+            width: 100%; /* Sets width to 100% of parent */
+            max-width: 900px; /* Limits maximum width */
+            background: transparent; /* Makes background transparent */
+            display: flex; /* Enables flexbox layout */
+            flex-direction: column; /* Arranges children vertically */
+            gap: 2rem; /* Sets gap between child elements */
         }
 
-        .header {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            background: transparent;
+        .header { /* Styles for header section */
+            display: flex; /* Enables flexbox layout */
+            align-items: center; /* Centers items vertically */
+            gap: 2rem; /* Sets gap between child elements */
+            background: transparent; /* Makes background transparent */
         }
 
-        .profile-picture {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid white;
+        .profile-picture { /* Styles for profile image */
+            width: 100%; /* Sets width to 100% of parent */
+            height: 100%; /* Sets height to 100% of parent */
+            border-radius: 50%; /* Makes image circular */
+            object-fit: cover; /* Maintains aspect ratio covering container */
+            border: 4px solid white; /* Adds white border */
         }
 
-        .profile-picture:hover {
-            transform: scale(1.05) rotate(3deg);
+        .profile-picture:hover { /* Styles for profile image on hover */
+            transform: scale(1.05) rotate(3deg); /* Enlarges and rotates image slightly */
         }
-        .profile-picture-wrapper {
-            width: 300px;
-            height: 200px;
-            border-radius: 50%;
-            background: var(--accent-gradient);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 5px;
-            box-shadow: 0 10px 30px rgba(37, 117, 252, 0.2);
-            transition: transform 0.3s ease;
+        .profile-picture-wrapper { /* Styles for profile image container */
+            width: 300px; /* Sets fixed width */
+            height: 200px; /* Sets fixed height */
+            border-radius: 50%; /* Makes container circular */
+            background: var(--accent-gradient); /* Applies accent gradient */
+            display: flex; /* Enables flexbox layout */
+            justify-content: center; /* Centers content horizontally */
+            align-items: center; /* Centers content vertically */
+            padding: 5px; /* Adds padding inside container */
+            box-shadow: 0 10px 30px rgba(37, 117, 252, 0.2); /* Adds shadow effect */
+            transition: transform 0.3s ease; /* Adds smooth transition for transform */
         }
-        .profile-picture-wrapper:hover {
-            transform: scale(1.05) rotate(3deg);
-        }
-
-        .header-content {
-            flex-grow: 1;
+        .profile-picture-wrapper:hover { /* Styles for profile image container on hover */
+            transform: scale(1.05) rotate(3deg); /* Enlarges and rotates container slightly */
         }
 
-        .header-content h1 {
-            font-size: 2.5rem;
-            background: var(--accent-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 800;
-            margin-bottom: 0.5rem;
+        .header-content { /* Styles for header text content */
+            flex-grow: 1; /* Allows element to grow and fill available space */
         }
 
-        .header-content .tagline {
-            font-size: 1.2rem;
-            color: var(--text-secondary);
-            margin-bottom: 1rem;
+        .header-content h1 { /* Styles for main heading */
+            font-size: 2.5rem; /* Sets font size */
+            background: var(--accent-gradient); /* Sets text background */
+            -webkit-background-clip: text; /* Clips background to text shape */
+            -webkit-text-fill-color: transparent; /* Makes text color transparent */
+            font-weight: 800; /* Sets font weight to extra bold */
+            margin-bottom: 0.5rem; /* Adds space below element */
+        }
+
+        .header-content .tagline { /* Styles for tagline text */
+            font-size: 1.2rem; /* Sets font size */
+            color: var(--text-secondary); /* Sets text color */
+            margin-bottom: 1rem; /* Adds space below element */
         }
 
         
-        .nav-menu {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 2rem;
-            position: relative;
-            background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 1rem;
-            box-shadow: 0 10px 30px var(--soft-shadow);
-            max-width: 800px; 
-            margin-left: auto;  
-            margin-right: auto;
+        .nav-menu { /* Styles for navigation menu */
+            display: flex; /* Enables flexbox layout */
+            justify-content: center; /* Centers content horizontally */
+            margin-bottom: 2rem; /* Adds space below element */
+            position: relative; /* Sets positioning context */
+            background: rgba(255, 255, 255, 0.6); /* Sets semi-transparent background */
+            backdrop-filter: blur(10px); /* Adds blur effect to background */
+            border-radius: 15px; /* Rounds corners */
+            padding: 1rem; /* Adds padding inside element */
+            box-shadow: 0 10px 30px var(--soft-shadow); /* Adds shadow effect */
+            max-width: 800px; /* Limits maximum width */
+            margin-left: auto; /* Centers horizontally by setting auto margins */
+            margin-right: auto; /* Centers horizontally by setting auto margins */
         }
 
-        .nav-menu ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            position: relative;
+        .nav-menu ul { /* Styles for navigation list */
+            display: flex; /* Enables flexbox layout */
+            list-style: none; /* Removes bullet points */
+            gap: 2rem; /* Sets gap between items */
+            position: relative; /* Sets positioning context */
         }
 
-        .nav-item {
-            position: relative;
-            font-size: 1.2rem;
-            cursor: pointer;
-            padding: 0.5rem 1rem;
-            font-weight: 600;
-            color: var(--text-secondary);
-            transition: color 0.3s ease;
+        .nav-item { /* Styles for navigation items */
+            position: relative; /* Sets positioning context */
+            font-size: 1.2rem; /* Sets font size */
+            cursor: pointer; /* Changes cursor to pointer on hover */
+            padding: 0.5rem 1rem; /* Adds padding inside element */
+            font-weight: 600; /* Sets font weight to semi-bold */
+            color: var(--text-secondary); /* Sets text color */
+            transition: color 0.3s ease; /* Adds smooth transition for color */
         }
 
-        .nav-item:hover {
-            color: #468b06;
+        .nav-item:hover { /* Styles for navigation items on hover */
+            color: #468b06; /* Changes text color */
         }
 
-        .active-nav {
-            color: #6f15b8;
+        .active-nav { /* Styles for active navigation item */
+            color: #6f15b8; /* Sets text color */
         }
 
-        .underline {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            height: 3px;
-            background: var(--accent-gradient);
-            border-radius: 3px;
-            transition: all 0.3s ease;
+        .underline { /* Styles for underline animation element */
+            position: absolute; /* Positions element absolutely */
+            bottom: 0; /* Aligns to bottom */
+            left: 0; /* Aligns to left */
+            height: 3px; /* Sets height */
+            background: var(--accent-gradient); /* Applies accent gradient */
+            border-radius: 3px; /* Rounds corners */
+            transition: all 0.3s ease; /* Adds smooth transition for all properties */
         }
 
-        .section-container {
-            display: none;
+        .section-container { /* Styles for section containers */
+            display: none; /* Hides by default */
         }
 
-        .section-container.active {
-            display: block;
+        .section-container.active { /* Styles for active section container */
+            display: block; /* Shows element */
         }
 
-        .section-title {
-            position: relative;
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-            color: var(--text-primary);
-            opacity: 0.7;
+        .section-title { /* Styles for section titles */
+            position: relative; /* Sets positioning context */
+            margin-bottom: 1.5rem; /* Adds space below element */
+            font-size: 1.5rem; /* Sets font size */
+            color: var(--text-primary); /* Sets text color */
+            opacity: 0.7; /* Makes slightly transparent */
         }
 
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -0.5rem;
-            left: 0;
-            width: 100px;
-            height: 3px;
-            background: var(--accent-gradient);
+        .section-title::after { /* Styles for line after section titles */
+            content: ''; /* Required for pseudo-element */
+            position: absolute; /* Positions element absolutely */
+            bottom: -0.5rem; /* Positions below text */
+            left: 0; /* Aligns to left */
+            width: 100px; /* Sets width */
+            height: 3px; /* Sets height */
+            background: var(--accent-gradient); /* Applies accent gradient */
         }
 
-        .project {
-            background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 10px 30px var(--soft-shadow);
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
+        .project { /* Styles for project cards */
+            background: rgba(255, 255, 255, 0.6); /* Sets semi-transparent background */
+            backdrop-filter: blur(10px); /* Adds blur effect to background */
+            border-radius: 15px; /* Rounds corners */
+            padding: 1.5rem; /* Adds padding inside element */
+            margin-bottom: 1.5rem; /* Adds space below element */
+            box-shadow: 0 10px 30px var(--soft-shadow); /* Adds shadow effect */
+            transition: all 0.3s ease; /* Adds smooth transition for all properties */
+            display: flex; /* Enables flexbox layout */
+            align-items: center; /* Centers items vertically */
+            gap: 1.5rem; /* Sets gap between child elements */
         }
 
-        .project:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        .project:hover { /* Styles for project cards on hover */
+            transform: translateY(-10px); /* Moves card up */
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* Enhances shadow */
         }
 
-        .project-image {
-            width: 180px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 10px;
-            filter: grayscale(30%);
-            transition: all 0.3s ease;
+        .project-image { /* Styles for project images */
+            width: 180px; /* Sets fixed width */
+            height: 150px; /* Sets fixed height */
+            object-fit: cover; /* Maintains aspect ratio covering container */
+            border-radius: 10px; /* Rounds corners */
+            filter: grayscale(30%); /* Adds slight grayscale effect */
+            transition: all 0.3s ease; /* Adds smooth transition for all properties */
         }
 
-        .project:hover .project-image {
-            filter: grayscale(0%);
-            transform: scale(1.1);
+        .project:hover .project-image { /* Styles for project images when card is hovered */
+            filter: grayscale(0%); /* Removes grayscale effect */
+            transform: scale(1.1); /* Enlarges image */
         }
 
-        .project-content {
-            flex-grow: 1;
+        .project-content { /* Styles for project text content */
+            flex-grow: 1; /* Allows element to grow and fill available space */
         }
 
-        .project-title {
-            background: var(--accent-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
+        .project-title { /* Styles for project titles */
+            background: var(--accent-gradient); /* Sets text background */
+            -webkit-background-clip: text; /* Clips background to text shape */
+            -webkit-text-fill-color: transparent; /* Makes text color transparent */
+            font-size: 1.3rem; /* Sets font size */
+            margin-bottom: 0.5rem; /* Adds space below element */
         }
 
-        .project-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
+        .project-links { /* Styles for project link container */
+            display: flex; /* Enables flexbox layout */
+            gap: 1rem; /* Sets gap between child elements */
+            margin-top: 1rem; /* Adds space above element */
         }
 
-        .btn {
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            background: var(--accent-gradient);
-            color: white;
-            border-color: #f5f7fa;
-            font-weight: 600;
-            transition: transform 0.3s ease;
+        .btn { /* Styles for buttons */
+            text-decoration: none; /* Removes underline from links */
+            padding: 0.5rem 1rem; /* Adds padding inside element */
+            border-radius: 5px; /* Rounds corners */
+            background: var(--accent-gradient); /* Applies accent gradient */
+            color: white; /* Sets text color */
+            border-color: #f5f7fa; /* Sets border color */
+            font-weight: 600; /* Sets font weight to semi-bold */
+            transition: transform 0.3s ease; /* Adds smooth transition for transform */
         }
 
-        .btn:hover {
-            transform: scale(1.05);
+        .btn:hover { /* Styles for buttons on hover */
+            transform: scale(1.05); /* Enlarges button slightly */
         }
 
-        .contact {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 2rem;
+        .contact { /* Styles for contact section */
+            display: flex; /* Enables flexbox layout */
+            justify-content: center; /* Centers content horizontally */
+            gap: 2rem; /* Sets gap between child elements */
+            margin-top: 2rem; /* Adds space above element */
         }
 
-        .contact a {
-            color: var(--text-secondary);
-            font-size: 1.5rem;
-            transition: all 0.3s ease;
+        .contact a { /* Styles for contact links */
+            color: var(--text-secondary); /* Sets text color */
+            font-size: 1.5rem; /* Sets font size */
+            transition: all 0.3s ease; /* Adds smooth transition for all properties */
         }
 
-        .contact a:hover {
-            transform: scale(1.2) rotate(360deg);
-            background: var(--accent-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .contact a:hover { /* Styles for contact links on hover */
+            transform: scale(1.2) rotate(360deg); /* Enlarges and rotates link */
+            background: var(--accent-gradient); /* Sets text background */
+            -webkit-background-clip: text; /* Clips background to text shape */
+            -webkit-text-fill-color: transparent; /* Makes text color transparent */
         }
 
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-bottom: 2rem;
+        .skills-container { /* Styles for skills container */
+            display: grid; /* Enables grid layout */
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Creates responsive grid columns */
+            gap: 1rem; /* Sets gap between grid items */
+            margin-bottom: 2rem; /* Adds space below element */
         }
 
-        .skill-card {
-            background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 1.5rem;
-            box-shadow: 0 10px 30px var(--soft-shadow);
-            transition: all 0.3s ease;
-            text-align: center;
+        .skill-card { /* Styles for skill cards */
+            background: rgba(255, 255, 255, 0.6); /* Sets semi-transparent background */
+            backdrop-filter: blur(10px); /* Adds blur effect to background */
+            border-radius: 15px; /* Rounds corners */
+            padding: 1.5rem; /* Adds padding inside element */
+            box-shadow: 0 10px 30px var(--soft-shadow); /* Adds shadow effect */
+            transition: all 0.3s ease; /* Adds smooth transition for all properties */
+            text-align: center; /* Centers text */
         }
 
-        .skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        .skill-card:hover { /* Styles for skill cards on hover */
+            transform: translateY(-5px); /* Moves card up */
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* Enhances shadow */
         }
 
-        .skill-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            background: var(--accent-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .skill-icon { /* Styles for skill icons */
+            font-size: 2.5rem; /* Sets font size */
+            margin-bottom: 1rem; /* Adds space below element */
+            background: var(--accent-gradient); /* Sets text background */
+            -webkit-background-clip: text; /* Clips background to text shape */
+            -webkit-text-fill-color: transparent; /* Makes text color transparent */
         }
 
-        .skills-section {
-            background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 1.5rem;
-            box-shadow: 0 10px 30px var(--soft-shadow);
-            margin-bottom: 1.5rem;
+        .skills-section { /* Styles for skills section */
+            background: rgba(255, 255, 255, 0.6); /* Sets semi-transparent background */
+            backdrop-filter: blur(10px); /* Adds blur effect to background */
+            border-radius: 15px; /* Rounds corners */
+            padding: 1.5rem; /* Adds padding inside element */
+            box-shadow: 0 10px 30px var(--soft-shadow); /* Adds shadow effect */
+            margin-bottom: 1.5rem; /* Adds space below element */
         }
 
-        .skills-section h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            background: var(--accent-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .skills-section h3 { /* Styles for skills section headings */
+            font-size: 1.3rem; /* Sets font size */
+            margin-bottom: 1rem; /* Adds space below element */
+            background: var(--accent-gradient); /* Sets text background */
+            -webkit-background-clip: text; /* Clips background to text shape */
+            -webkit-text-fill-color: transparent; /* Makes text color transparent */
         }
 
-        .skills-list {
-            list-style: none;
+        .skills-list { /* Styles for skills lists */
+            list-style: none; /* Removes bullet points */
         }
 
-        .skills-list li {
-            margin-bottom: 0.5rem;
-            position: relative;
-            padding-left: 1.5rem;
+        .skills-list li { /* Styles for skills list items */
+            margin-bottom: 0.5rem; /* Adds space below element */
+            position: relative; /* Sets positioning context */
+            padding-left: 1.5rem; /* Adds padding on left */
         }
 
-        .skills-list li::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: #1f7a2b;
-            font-weight: bold;
+        .skills-list li::before { /* Styles for custom bullets before list items */
+            content: '•'; /* Sets content to bullet character */
+            position: absolute; /* Positions element absolutely */
+            left: 0; /* Aligns to left */
+            color: #1f7a2b; /* Sets color */
+            font-weight: bold; /* Sets font weight to bold */
         }
 
 
-        .about-content {
-            background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 1.5rem;
-            box-shadow: 0 10px 30px var(--soft-shadow);
+        .about-content { /* Styles for about section content */
+            background: rgba(255, 255, 255, 0.6); /* Sets semi-transparent background */
+            backdrop-filter: blur(10px); /* Adds blur effect to background */
+            border-radius: 15px; /* Rounds corners */
+            padding: 1.5rem; /* Adds padding inside element */
+            box-shadow: 0 10px 30px var(--soft-shadow); /* Adds shadow effect */
         }
 
   
-        .contact-form {
-            background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 1.5rem;
-            box-shadow: 0 10px 30px var(--soft-shadow);
-            margin-bottom: 1.5rem;
+        .contact-form { /* Styles for contact form */
+            background: rgba(255, 255, 255, 0.6); /* Sets semi-transparent background */
+            backdrop-filter: blur(10px); /* Adds blur effect to background */
+            border-radius: 15px; /* Rounds corners */
+            padding: 1.5rem; /* Adds padding inside element */
+            box-shadow: 0 10px 30px var(--soft-shadow); /* Adds shadow effect */
+            margin-bottom: 1.5rem; /* Adds space below element */
         }
 
-        .form-group {
-            margin-bottom: 1.5rem;
+        .form-group { /* Styles for form groups */
+            margin-bottom: 1.5rem; /* Adds space below element */
         }
 
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
+        .form-group label { /* Styles for form labels */
+            display: block; /* Makes element block-level */
+            margin-bottom: 0.5rem; /* Adds space below element */
+            font-weight: 600; /* Sets font weight to semi-bold */
         }
 
-        .form-control {
-            width: 100%;
-            padding: 0.75rem;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-            font-family: inherit;
+        .form-control { /* Styles for form inputs */
+            width: 100%; /* Sets width to 100% of parent */
+            padding: 0.75rem; /* Adds padding inside element */
+            border-radius: 5px; /* Rounds corners */
+            border: 1px solid #ddd; /* Adds light border */
+            font-family: inherit; /* Inherits font family from parent */
         }
 
-        textarea.form-control {
-            resize: vertical;
-            min-height: 150px;
+        textarea.form-control { /* Styles for textarea inputs */
+            resize: vertical; /* Allows vertical resizing only */
+            min-height: 150px; /* Sets minimum height */
         }
         
-        .contact-info {
-            background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 1.5rem;
-            box-shadow: 0 10px 30px var(--soft-shadow);
-            margin-bottom: 1.5rem;
+        .contact-info { /* Styles for contact information section */
+            background: rgba(255, 255, 255, 0.6); /* Sets semi-transparent background */
+            backdrop-filter: blur(10px); /* Adds blur effect to background */
+            border-radius: 15px; /* Rounds corners */
+            padding: 1.5rem; /* Adds padding inside element */
+            box-shadow: 0 10px 30px var(--soft-shadow); /* Adds shadow effect */
+            margin-bottom: 1.5rem; /* Adds space below element */
         }
         
-        .contact-info h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            background: var(--accent-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .contact-info h3 { /* Styles for contact info heading */
+            font-size: 1.3rem; /* Sets font size */
+            margin-bottom: 1rem; /* Adds space below element */
+            background: var(--accent-gradient); /* Sets text background */
+            -webkit-background-clip: text; /* Clips background to text shape */
+            -webkit-text-fill-color: transparent; /* Makes text color transparent */
         }
         
-        .contact-info-list {
-            list-style: none;
+        .contact-info-list { /* Styles for contact info list */
+            list-style: none; /* Removes bullet points */
         }
         
-        .contact-info-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
+        .contact-info-item { /* Styles for contact info items */
+            display: flex; /* Enables flexbox layout */
+            align-items: center; /* Centers items vertically */
+            margin-bottom: 1rem; /* Adds space below element */
         }
         
-        .contact-icon {
-            font-size: 1.2rem;
-            margin-right: 1rem;
-            background: var(--accent-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            width: 25px;
+        .contact-icon { /* Styles for contact icons */
+            font-size: 1.2rem; /* Sets font size */
+            margin-right: 1rem; /* Adds space to right */
+            background: var(--accent-gradient); /* Sets text background */
+            -webkit-background-clip: text; /* Clips background to text shape */
+            -webkit-text-fill-color: transparent; /* Makes text color transparent */
+            width: 25px; /* Sets fixed width */
         }
 
-        @media (max-width: 768px) {
-            .header, .project {
-                flex-direction: column;
-                text-align: center;
+        @media (max-width: 768px) { /* Media query for screens smaller than 768px */
+            .header, .project { /* Styles for header and project on small screens */
+                flex-direction: column; /* Arranges children vertically */
+                text-align: center; /* Centers text */
             }
 
-            .project-image {
-                margin-bottom: 1rem;
+            .project-image { /* Styles for project images on small screens */
+                margin-bottom: 1rem; /* Adds space below element */
             }
 
-            .nav-menu ul {
-                flex-wrap: wrap;
-                justify-content: center;
+            .nav-menu ul { /* Styles for navigation list on small screens */
+                flex-wrap: wrap; /* Allows items to wrap */
+                justify-content: center; /* Centers content horizontally */
             }
         }
     </style>
 </head>
-<body>
-    <div class="resume-container">
-        <header class="header">
-            <div class="profile-picture-wrapper">
-                <img src="soham.jpg" alt="Soham Ghosh" class="profile-picture">
+<body> <!-- Start of visible content -->
+    <div class="resume-container"> <!-- Main wrapper -->
+        <header class="header"> <!-- Header section -->
+            <div class="profile-picture-wrapper"> <!-- Profile picture container -->
+                <img src="soham.jpg" alt="Soham Ghosh" class="profile-picture"> <!-- Profile picture -->
             </div>
-            <div class="header-content">
-                <h1>Soham Ghosh</h1>
-                <p class="tagline">Student | Currently at VIT Chennai</p>
-                <p>Transforming complex challenges into elegant technical solutions through innovative language engineering and cool-looking architectures.</p>
+            <div class="header-content"> <!-- Header text content -->
+                <h1>Soham Ghosh</h1> <!-- Name heading -->
+                <p class="tagline">Student | Currently at VIT Chennai</p> <!-- Subtitle/tagline -->
+                <p>Transforming complex challenges into elegant technical solutions through innovative language engineering and cool-looking architectures.</p> <!-- Bio blurb -->
             </div>
         </header>
 
-        <nav class="nav-menu">
-            <ul>
-                <li class="nav-item active-nav" data-section="projects">Projects</li>
-                <li class="nav-item" data-section="skills">Skills</li>
-                <li class="nav-item" data-section="about">About</li>
-                <li class="nav-item" data-section="contact">Contact</li>
-                <div class="underline"></div>
+        <nav class="nav-menu"> <!-- Navigation menu -->
+            <ul> <!-- Navigation list -->
+                <li class="nav-item active-nav" data-section="projects">Projects</li> <!-- Projects tab (active by default) -->
+                <li class="nav-item" data-section="skills">Skills</li> <!-- Skills tab -->
+                <li class="nav-item" data-section="about">About</li> <!-- About tab -->
+                <li class="nav-item" data-section="contact">Contact</li> <!-- Contact tab -->
+                <div class="underline"></div> <!-- Active tab indicator -->
             </ul>
         </nav>
 
-        <div id="projects" class="section-container active">
-            <h2 class="section-title">Projects</h2>
-            <div id="projectContainer"></div>
+        <div id="projects" class="section-container active"> <!-- Projects section (visible by default) -->
+            <h2 class="section-title">Projects</h2> <!-- Section title -->
+            <div id="projectContainer"></div> <!-- Container for dynamically added projects -->
         </div>
 
-        <div id="skills" class="section-container">
-            <h2 class="section-title">Skills</h2>
+        <div id="skills" class="section-container"> <!-- Skills section (hidden by default) -->
+            <h2 class="section-title">Skills</h2> <!-- Section title -->
             
-            <div class="skills-container">
-                <div class="skill-card">
-                    <i class="fab fa-python skill-icon"></i>
-                    <h3>Python</h3>
+            <div class="skills-container"> <!-- Grid for skill icons -->
+                <div class="skill-card"> <!-- Individual skill card -->
+                    <i class="fab fa-python skill-icon"></i> <!-- Python icon -->
+                    <h3>Python</h3> <!-- Skill name -->
                 </div>
-                <div class="skill-card">
-                    <i class="fas fa-code skill-icon"></i>
-                    <h3>C/C++</h3>
+                <div class="skill-card"> <!-- Individual skill card -->
+                    <i class="fas fa-code skill-icon"></i> <!-- Code icon -->
+                    <h3>C/C++</h3> <!-- Skill name -->
                 </div>
-                <div class="skill-card">
-                    <i class="fab fa-js skill-icon"></i>
-                    <h3>JavaScript</h3>
+                <div class="skill-card"> <!-- Individual skill card -->
+                    <i class="fab fa-js skill-icon"></i> <!-- JavaScript icon -->
+                    <h3>JavaScript</h3> <!-- Skill name -->
                 </div>
-                <div class="skill-card">
-                    <i class="fab fa-react skill-icon"></i>
-                    <h3>React</h3>
+                <div class="skill-card"> <!-- Individual skill card -->
+                    <i class="fab fa-react skill-icon"></i> <!-- React icon -->
+                    <h3>React</h3> <!-- Skill name -->
                 </div>
-                <div class="skill-card">
-                    <i class="fab fa-node-js skill-icon"></i>
-                    <h3>Node.js</h3>
+                <div class="skill-card"> <!-- Individual skill card -->
+                    <i class="fab fa-node-js skill-icon"></i> <!-- Node.js icon -->
+                    <h3>Node.js</h3> <!-- Skill name -->
                 </div>
-                <div class="skill-card">
-                    <i class="fas fa-database skill-icon"></i>
-                    <h3>SQL</h3>
+                <div class="skill-card"> <!-- Individual skill card -->
+                    <i class="fas fa-database skill-icon"></i> <!-- Database icon -->
+                    <h3>SQL</h3> <!-- Skill name -->
                 </div>
-                <div class="skill-card">
-                    <i class="fab fa-html5 skill-icon"></i>
-                    <h3>HTML</h3>
+                <div class="skill-card"> <!-- Individual skill card -->
+                    <i class="fab fa-html5 skill-icon"></i> <!-- HTML5 icon -->
+                    <h3>HTML</h3> <!-- Skill name -->
                 </div>
-                <div class="skill-card">
-                    <i class="fab fa-css3-alt skill-icon"></i>
-                    <h3>CSS</h3>
+                <div class="skill-card"> <!-- Individual skill card -->
+                    <i class="fab fa-css3-alt skill-icon"></i> <!-- CSS3 icon -->
+                    <h3>CSS</h3> <!-- Skill name -->
                 </div>
             </div>
             
-            <div class="skills-section">
-                <h3>Key Courses Taken</h3>
-                <ul class="skills-list">
-                    <li>Data Structure</li>
-                    <li>Algorithms</li>
-                    <li>DBMS</li>
-                    <li>Operating Systems</li>
-                    <li>Computer Networks</li>
-                    <li>Computer Architectures</li>
-                    <li>Theory of Computations</li>
-                    <li>Microprocessor-Microcontroller</li>
-                    <li>Signals and Systems</li>
-                    <li>Digital Systems and Designs</li>
+            <div class="skills-section"> <!-- Coursework section -->
+                <h3>Key Courses Taken</h3> <!-- Section heading -->
+                <ul class="skills-list"> <!-- List of courses -->
+                    <li>Data Structure</li> <!-- Course item -->
+                    <li>Algorithms</li> <!-- Course item -->
+                    <li>DBMS</li> <!-- Course item -->
+                    <li>Operating Systems</li> <!-- Course item -->
+                    <li>Computer Networks</li> <!-- Course item -->
+                    <li>Computer Architectures</li> <!-- Course item -->
+                    <li>Theory of Computations</li> <!-- Course item -->
+                    <li>Microprocessor-Microcontroller</li> <!-- Course item -->
+                    <li>Signals and Systems</li> <!-- Course item -->
+                    <li>Digital Systems and Designs</li> <!-- Course item -->
                 </ul>
             </div>
             
-            <div class="skills-section">
-                <h3>Technical Skills</h3>
-                <ul class="skills-list">
-                    <li><strong>Programming:</strong> C/C++, Python, JavaScript, SQL</li>
-                    <li><strong>Web Skills:</strong> HTML5/CSS3/JS, ReactJS/NodeJS</li>
-                    <li><strong>Tools & OS:</strong> Matlab, Scratch, Google Colab, ModelSim, Keil µVision, LTspice, Linux, Windows</li>
-                    <li><strong>Software Proficiency:</strong> Canva, Microsoft PowerPoint, Adobe Photoshop, Figma, Overleaf</li>
+            <div class="skills-section"> <!-- Technical skills section -->
+                <h3>Technical Skills</h3> <!-- Section heading -->
+                <ul class="skills-list"> <!-- List of skills -->
+                    <li><strong>Programming:</strong> C/C++, Python, JavaScript, SQL</li> <!-- Programming skills -->
+                    <li><strong>Web Skills:</strong> HTML5/CSS3/JS, ReactJS/NodeJS</li> <!-- Web development skills -->
+                    <li><strong>Tools & OS:</strong> Matlab, Scratch, Google Colab, ModelSim, Keil µVision, LTspice, Linux, Windows</li> <!-- Tools and OS skills -->
+                    <li><strong>Software Proficiency:</strong> Canva, Microsoft PowerPoint, Adobe Photoshop, Figma, Overleaf</li> <!-- Software skills -->
                 </ul>
             </div>
         </div>
 
-        <div id="about" class="section-container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <p>Hey! I'm a CSE student at VIT Chennai, I like cooking and storytelling through writing, filmmaking, and photography—plus, I have a knack for picking things up fast!</p>
+        <div id="about" class="section-container"> <!-- About section (hidden by default) -->
+            <h2 class="section-title">About Me</h2> <!-- Section title -->
+            <div class="about-content"> <!-- About content container -->
+                <p>Hey! I'm a CSE student at VIT Chennai, I like cooking and storytelling through writing, filmmaking, and photography—plus, I have a knack for picking things up fast!</p> <!-- Bio text -->
             </div>
         </div>
 
-        <div id="contact" class="section-container">
-            <h2 class="section-title">Contact Me</h2>
+        <div id="contact" class="section-container"> <!-- Contact section (hidden by default) -->
+            <h2 class="section-title">Contact Me</h2> <!-- Section title -->
             
-            <div class="contact-info">
-                <h3>Contact Information</h3>
-                <div class="contact-info-list">
-                    <div class="contact-info-item">
-                        <i class="fas fa-envelope contact-icon"></i>
-                        <span>soham.ghosh2023@vitchennai.ac.in</span>
+            <div class="contact-info"> <!-- Contact info container -->
+                <h3>Contact Information</h3> <!-- Section heading -->
+                <div class="contact-info-list"> <!-- Contact info list -->
+                    <div class="contact-info-item"> <!-- Email contact item -->
+                        <i class="fas fa-envelope contact-icon"></i> <!-- Email icon -->
+                        <span>soham.ghosh2023@vitchennai.ac.in</span> <!-- Email address -->
                     </div>
-                    <div class="contact-info-item">
-                        <i class="fas fa-phone contact-icon"></i>
-                        <span>+91 82407 01068</span>
+                    <div class="contact-info-item"> <!-- Phone contact item -->
+                        <i class="fas fa-phone contact-icon"></i> <!-- Phone icon -->
+                        <span>+91 82407 01068</span> <!-- Phone number -->
                     </div>
-                    <div class="contact-info-item">
-                        <i class="fab fa-github contact-icon"></i>
-                        <a href="https://github.com/jellylemonshake" target="_blank" style="color: rgb(70, 69, 69)">github.com/jellylemonshake</a>
+                    <div class="contact-info-item"> <!-- GitHub contact item -->
+                        <i class="fab fa-github contact-icon"></i> <!-- GitHub icon -->
+                        <a href="https://github.com/jellylemonshake" target="_blank" style="color: rgb(70, 69, 69)">github.com/jellylemonshake</a> <!-- GitHub link -->
                     </div>
                 </div>
             </div>
             
-            <div class="contact-form">
-                <h3>Send Me a Message</h3>
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" class="form-control" placeholder="Your Name">
+            <div class="contact-form"> <!-- Contact form container -->
+                <h3>Send Me a Message</h3> <!-- Form heading -->
+                <div class="form-group"> <!-- Name input group -->
+                    <label for="name">Name</label> <!-- Name label -->
+                    <input type="text" id="name" class="form-control" placeholder="Your Name"> <!-- Name input field -->
                 </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" class="form-control" placeholder="Your Email">
+                <div class="form-group"> <!-- Email input group -->
+                    <label for="email">Email</label> <!-- Email label -->
+                    <input type="email" id="email" class="form-control" placeholder="Your Email"> <!-- Email input field -->
                 </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" class="form-control" placeholder="Your Message"></textarea>
+                <div class="form-group"> <!-- Message input group -->
+                    <label for="message">Message</label> <!-- Message label -->
+                    <textarea id="message" class="form-control" placeholder="Your Message"></textarea> <!-- Message textarea -->
                 </div>
-                <button class="btn">Send</button>
+                <button class="btn">Send</button> <!-- Submit button -->
             </div>
         </div>
 
-        <footer class="contact">
-            <a href="https://github.com/jellylemonshake" target="_blank"><i class="fab fa-github"></i></a>
+        <footer class="contact"> <!-- Footer section -->
+            <a href="https://github.com/jellylemonshake" target="_blank"><i class="fab fa-github"></i></a> <!-- GitHub link with icon -->
         </footer>
     </div>
 
     <script>
-        const projects = [
+        const projects = [  // Array to store all project data objects
             {
-                name: "Advanced 2D Graphing Calculator in C",
-                description: "Visualize Advanced mathematical equations (acos, asin, sinh, cosh, abs, floor etc.) with real-time rendering on a 2D plane.",
-                imageUrl: "https://github.com/user-attachments/assets/d1fdff9d-9b7c-4333-ae52-2a206a97b0ff",
-                githubLink: "https://github.com/jellylemonshake/Advanced-2D-Graphing-Calc-in-C",
-                downloadFile: "https://raw.githubusercontent.com/jellylemonshake/Advanced-2D-Graphing-Calc-in-C/main/Advanced_2D_Graphing_Calc.c"
+                name: "Advanced 2D Graphing Calculator in C",  // Project title
+                description: "Visualize Advanced mathematical equations (acos, asin, sinh, cosh, abs, floor etc.) with real-time rendering on a 2D plane.",  // Project description text
+                imageUrl: "https://github.com/user-attachments/assets/d1fdff9d-9b7c-4333-ae52-2a206a97b0ff",  // URL for project screenshot/image
+                githubLink: "https://github.com/jellylemonshake/Advanced-2D-Graphing-Calc-in-C",  // GitHub repository link
+                downloadFile: "https://raw.githubusercontent.com/jellylemonshake/Advanced-2D-Graphing-Calc-in-C/main/Advanced_2D_Graphing_Calc.c"  // Direct link to download source code
             },
             {
-                name: "Chat Application with simple TCP Socket",
-                description: "A client-server chat application built using C sockets and threading. The application allows multiple clients to connect to a central server and exchange messages in a group chat environment.",
-                imageUrl: "https://github.com/user-attachments/assets/40088e05-e1ab-4b80-a656-e72d0506a480",
-                githubLink: "https://github.com/jellylemonshake/Chat-Application---Simple-TCP-Socket",
-                downloadFile: "https://raw.githubusercontent.com/jellylemonshake/Chat-Application---Simple-TCP-Socket/main/server.c"
+                name: "Chat Application with simple TCP Socket",  // Project title
+                description: "A client-server chat application built using C sockets and threading. The application allows multiple clients to connect to a central server and exchange messages in a group chat environment.",  // Project description 
+                imageUrl: "https://github.com/user-attachments/assets/40088e05-e1ab-4b80-a656-e72d0506a480",  // Project image URL
+                githubLink: "https://github.com/jellylemonshake/Chat-Application---Simple-TCP-Socket",  // GitHub repo link
+                downloadFile: "https://raw.githubusercontent.com/jellylemonshake/Chat-Application---Simple-TCP-Socket/main/server.c"  // Raw code download link
             },
             {
-                name: "Page Replacement Algorithms Simulation",
-                description: "Simulates algorithms like FIFO, LRU, and Optimal used in memory management.",
-                imageUrl: "https://github.com/user-attachments/assets/1789ef7a-269d-4b9f-86cb-8dc7945a5a12",
-                githubLink: "https://github.com/jellylemonshake/Page-Replacement-Algorithms-in-C",
-                downloadFile: "https://raw.githubusercontent.com/jellylemonshake/Page-Replacement-Algorithms-in-C/main/Page_Replacement.c"
+                name: "Page Replacement Algorithms Simulation",  // Project title
+                description: "Simulates algorithms like FIFO, LRU, and Optimal used in memory management.",  // Project description
+                imageUrl: "https://github.com/user-attachments/assets/1789ef7a-269d-4b9f-86cb-8dc7945a5a12",  // Project image URL
+                githubLink: "https://github.com/jellylemonshake/Page-Replacement-Algorithms-in-C",  // GitHub repo link
+                downloadFile: "https://raw.githubusercontent.com/jellylemonshake/Page-Replacement-Algorithms-in-C/main/Page_Replacement.c"  // Raw code download link
             },
             {
-                name: "Reverse Calculator/Equation Generator",
-                description: "Calculator that works backward from a result to find matching equations. Instead of solving equations, it creates them!",
-                imageUrl: "https://github.com/user-attachments/assets/487a29aa-c98e-47e5-8f6d-d682a0d1083f",
-                githubLink: "https://github.com/jellylemonshake/Reverse-Calculator",
-                downloadFile: "https://raw.githubusercontent.com/jellylemonshake/Reverse-Calculator/main/Reverse_Calculator.c"
+                name: "Reverse Calculator/Equation Generator",  // Project title
+                description: "Calculator that works backward from a result to find matching equations. Instead of solving equations, it creates them!",  // Project description
+                imageUrl: "https://github.com/user-attachments/assets/487a29aa-c98e-47e5-8f6d-d682a0d1083f",  // Project image URL
+                githubLink: "https://github.com/jellylemonshake/Reverse-Calculator",  // GitHub repo link
+                downloadFile: "https://raw.githubusercontent.com/jellylemonshake/Reverse-Calculator/main/Reverse_Calculator.c"  // Raw code download link
             },
             {
-                name: "Table Tennis/Pong in C",
-                description: "Retro style Single-Player Pong, its You VS the Computer!!",
-                imageUrl: "https://github.com/user-attachments/assets/2a044c6e-d073-4c93-91d2-9991c158dccc",
-                githubLink: "https://github.com/jellylemonshake/Pong-in-C",
-                downloadFile: "https://raw.githubusercontent.com/jellylemonshake/Pong-in-C/main/Pong.c"
+                name: "Table Tennis/Pong in C",  // Project title
+                description: "Retro style Single-Player Pong, its You VS the Computer!!",  // Project description
+                imageUrl: "https://github.com/user-attachments/assets/2a044c6e-d073-4c93-91d2-9991c158dccc",  // Project image URL
+                githubLink: "https://github.com/jellylemonshake/Pong-in-C",  // GitHub repo link
+                downloadFile: "https://raw.githubusercontent.com/jellylemonshake/Pong-in-C/main/Pong.c"  // Raw code download link
             },
             {
-                name: "Analog Clock in C",
-                description: "Simulates a working analog clock using framerates.",
-                imageUrl: "https://github.com/user-attachments/assets/03e3d3f4-18c5-4bcf-8feb-b4b872aa54c0",
-                githubLink: "https://github.com/jellylemonshake/Analog-Clock-in-C",
-                downloadFile: "https://raw.githubusercontent.com/jellylemonshake/Analog-Clock-in-C/main/AnalogClock.c"
+                name: "Analog Clock in C",  // Project title
+                description: "Simulates a working analog clock using framerates.",  // Project description
+                imageUrl: "https://github.com/user-attachments/assets/03e3d3f4-18c5-4bcf-8feb-b4b872aa54c0",  // Project image URL
+                githubLink: "https://github.com/jellylemonshake/Analog-Clock-in-C",  // GitHub repo link
+                downloadFile: "https://raw.githubusercontent.com/jellylemonshake/Analog-Clock-in-C/main/AnalogClock.c"  // Raw code download link
             },
             {
-                name: "Geometry Dash on C",
-                description: "A C-based Geometry Dash-like game with dynamic obstacles floating and diagonal moving pillars.",
-                imageUrl: "https://github.com/user-attachments/assets/4d10b497-5053-44e9-bb94-a7c0242acda1",
-                githubLink: "https://github.com/jellylemonshake/Geometry-Dash-on-C",
-                downloadFile: "https://raw.githubusercontent.com/jellylemonshake/Geometry-Dash-on-C/main/Dash.c"            },
-            {
-                name: "Tetris in C",
-                description: "This is a simplified version of the classic Tetris game written in C.",
-                imageUrl: "https://github.com/user-attachments/assets/c77654ec-ac69-45c9-8bb7-1e800a1c5cf5",
-                githubLink: "https://github.com/jellylemonshake/Tetris-in-C",
-                downloadFile: "https://raw.githubusercontent.com/jellylemonshake/Tetris-in-C/main/Tetris.c"
+                name: "Geometry Dash on C",  // Project title
+                description: "A C-based Geometry Dash-like game with dynamic obstacles floating and diagonal moving pillars.",  // Project description
+                imageUrl: "https://github.com/user-attachments/assets/4d10b497-5053-44e9-bb94-a7c0242acda1",  // Project image URL
+                githubLink: "https://github.com/jellylemonshake/Geometry-Dash-on-C",  // GitHub repo link
+                downloadFile: "https://raw.githubusercontent.com/jellylemonshake/Geometry-Dash-on-C/main/Dash.c"  // Raw code download link
             },
             {
-                name: "Asteroid Shooter in C",
-                description: "A space-themed multidirectional shooter arcade game made in C",
-                imageUrl: "https://github.com/user-attachments/assets/da9960c7-6c1c-4462-9cfd-45a675bd96a6",
-                githubLink: "https://github.com/jellylemonshake/Asteroid-Shooter-in-C",
-                downloadFile: "https://raw.githubusercontent.com/jellylemonshake/Asteroid-Shooter-in-C/main/AsteroidShooter.c"
+                name: "Tetris in C",  // Project title
+                description: "This is a simplified version of the classic Tetris game written in C.",  // Project description
+                imageUrl: "https://github.com/user-attachments/assets/c77654ec-ac69-45c9-8bb7-1e800a1c5cf5",  // Project image URL
+                githubLink: "https://github.com/jellylemonshake/Tetris-in-C",  // GitHub repo link
+                downloadFile: "https://raw.githubusercontent.com/jellylemonshake/Tetris-in-C/main/Tetris.c"  // Raw code download link
             },
             {
-                name: "Flappy Bird on C", 
-                description: "A simple C-based implementation of the original ios Flappy Bird game",
-                imageUrl: "https://github.com/user-attachments/assets/f82fa438-3724-49f9-b410-fc1c3deb6b02", 
-                githubLink: "https://github.com/jellylemonshake/Flappy-Bird-on-C",
-                downloadFile: "https://raw.githubusercontent.com/jellylemonshake/Flappy-Bird-on-C/main/FlappyBird.c"
+                name: "Asteroid Shooter in C",  // Project title
+                description: "A space-themed multidirectional shooter arcade game made in C",  // Project description
+                imageUrl: "https://github.com/user-attachments/assets/da9960c7-6c1c-4462-9cfd-45a675bd96a6",  // Project image URL
+                githubLink: "https://github.com/jellylemonshake/Asteroid-Shooter-in-C",  // GitHub repo link
+                downloadFile: "https://raw.githubusercontent.com/jellylemonshake/Asteroid-Shooter-in-C/main/AsteroidShooter.c"  // Raw code download link
             },
             {
-                name: "Snake game in C", 
-                description: "A simple snake game in C terminal. A for left, S for down, D for right, W for up.",
-                imageUrl: "https://github.com/user-attachments/assets/89030acf-2ad2-48f3-8c17-5d4623e2f4c9", 
-                githubLink: "https://github.com/jellylemonshake/Snake-game-in-C",
-                downloadFile: "https://raw.githubusercontent.com/jellylemonshake/Snake-game-in-C/main/Snake.c"
-
+                name: "Flappy Bird on C",  // Project title
+                description: "A simple C-based implementation of the original ios Flappy Bird game",  // Project description
+                imageUrl: "https://github.com/user-attachments/assets/f82fa438-3724-49f9-b410-fc1c3deb6b02",  // Project image URL
+                githubLink: "https://github.com/jellylemonshake/Flappy-Bird-on-C",  // GitHub repo link
+                downloadFile: "https://raw.githubusercontent.com/jellylemonshake/Flappy-Bird-on-C/main/FlappyBird.c"  // Raw code download link
             },
             {
-                name: "Shortest Path Calculator",
-                description: "A C implementation of Dijkstra's, Bellman-Ford, Floyd-Warshall Algorithm, Johnson's Algorithm and A* Search Algorithm for finding the shortest paths in a weighted directed graph.",
-                imageUrl: "https://github.com/user-attachments/assets/349d249a-82cb-43aa-beef-6c5b42961de5",
-                githubLink: "https://github.com/jellylemonshake/Shortest-Path-Algorithms",
-                downloadFile: "https://raw.githubusercontent.com/jellylemonshake/Shortest-Path-Algorithms/main/Shortest_Path.c"
+                name: "Snake game in C",  // Project title
+                description: "A simple snake game in C terminal. A for left, S for down, D for right, W for up.",  // Project description
+                imageUrl: "https://github.com/user-attachments/assets/89030acf-2ad2-48f3-8c17-5d4623e2f4c9",  // Project image URL
+                githubLink: "https://github.com/jellylemonshake/Snake-game-in-C",  // GitHub repo link
+                downloadFile: "https://raw.githubusercontent.com/jellylemonshake/Snake-game-in-C/main/Snake.c"  // Raw code download link
+            },
+            {
+                name: "Shortest Path Calculator",  // Project title
+                description: "A C implementation of Dijkstra's, Bellman-Ford, Floyd-Warshall Algorithm, Johnson's Algorithm and A* Search Algorithm for finding the shortest paths in a weighted directed graph.",  // Project description
+                imageUrl: "https://github.com/user-attachments/assets/349d249a-82cb-43aa-beef-6c5b42961de5",  // Project image URL
+                githubLink: "https://github.com/jellylemonshake/Shortest-Path-Algorithms",  // GitHub repo link
+                downloadFile: "https://raw.githubusercontent.com/jellylemonshake/Shortest-Path-Algorithms/main/Shortest_Path.c"  // Raw code download link
             }
         ];
 
-        function renderProjects() {
-            const projectContainer = document.getElementById('projectContainer');
+        function renderProjects() {  // Function to dynamically render all projects to HTML
+            const projectContainer = document.getElementById('projectContainer');  // Get the container element where projects will be displayed
             
-            projects.forEach(project => {
-                const projectElement = document.createElement('div');
-                projectElement.classList.add('project');
+            projects.forEach(project => {  // Loop through each project in the array
+                const projectElement = document.createElement('div');  // Create new div for each project
+                projectElement.classList.add('project');  // Add 'project' class to the div for styling
                 
-                projectElement.innerHTML = `
-                    <img src="${project.imageUrl}" alt="${project.name}" class="project-image">
-                    <div class="project-content">
-                        <h3 class="project-title">${project.name}</h3>
-                        <p>${project.description}</p>
-                        <div class="project-links">
-                            <a href="${project.githubLink}" class="btn" target="_blank">View</a>
-                            <a href="${project.downloadFile}" class="btn" download>Code</a>
+                // Set HTML content for the project element using template literal
+                projectElement.innerHTML = ` 
+                    <img src="${project.imageUrl}" alt="${project.name}" class="project-image">  
+                    <div class="project-content"> 
+                        <h3 class="project-title">${project.name}</h3>  
+                        <p>${project.description}</p>  
+                        <div class="project-links"> 
+                            <a href="${project.githubLink}" class="btn" target="_blank">View</a>  
+                            <a href="${project.downloadFile}" class="btn" download>Code</a>  
                         </div>
                     </div>
                 `;
                 
-                projectContainer.appendChild(projectElement);
+                projectContainer.appendChild(projectElement);  // Add the complete project element to the container
             });
         }
 
-        document.addEventListener('DOMContentLoaded', function() {
-            renderProjects();
+        document.addEventListener('DOMContentLoaded', function() {  // Run when DOM is fully loaded
+            renderProjects();  // Call function to render all projects
             
-            const navItems = document.querySelectorAll('.nav-item');
-            const underline = document.querySelector('.underline');
-            const sections = document.querySelectorAll('.section-container');
+            const navItems = document.querySelectorAll('.nav-item');  // Get all navigation items
+            const underline = document.querySelector('.underline');  // Get the underline element used for navigation
+            const sections = document.querySelectorAll('.section-container');  // Get all section containers
             
-            const activeNav = document.querySelector('.active-nav');
-            if (activeNav) {
-                underline.style.width = `${activeNav.offsetWidth}px`;
-                underline.style.left = `${activeNav.offsetLeft}px`;
+            const activeNav = document.querySelector('.active-nav');  // Find the currently active navigation item
+            if (activeNav) {  // Check if there is an active navigation item
+                underline.style.width = `${activeNav.offsetWidth}px`;  // Set underline width to match active nav item
+                underline.style.left = `${activeNav.offsetLeft}px`;  // Position underline under active nav item
             }
             
-            navItems.forEach(item => {
-                item.addEventListener('click', function() {
-                    navItems.forEach(nav => nav.classList.remove('active-nav'));
-                    this.classList.add('active-nav');
+            navItems.forEach(item => {  // Loop through all navigation items
+                item.addEventListener('click', function() {  // Add click event listener to each nav item
+                    navItems.forEach(nav => nav.classList.remove('active-nav'));  // Remove active class from all nav items
+                    this.classList.add('active-nav');  // Add active class to clicked nav item
 
-                    underline.style.width = `${this.offsetWidth}px`;
-                    underline.style.left = `${this.offsetLeft}px`;
+                    underline.style.width = `${this.offsetWidth}px`;  // Update underline width to match clicked item
+                    underline.style.left = `${this.offsetLeft}px`;  // Update underline position
                     
-                    const sectionId = this.getAttribute('data-section');
-                    sections.forEach(section => {
-                        section.classList.remove('active');
-                        if (section.id === sectionId) {
-                            section.classList.add('active');
+                    const sectionId = this.getAttribute('data-section');  // Get section ID from data attribute
+                    sections.forEach(section => {  // Loop through all sections
+                        section.classList.remove('active');  // Remove active class from all sections
+                        if (section.id === sectionId) {  // Check if section ID matches the clicked nav item
+                            section.classList.add('active');  // Add active class to matching section
                         }
                     });
                 });
                 
-                item.addEventListener('mouseenter', function() {
-                    if (!this.classList.contains('active-nav')) {
-                        underline.style.width = `${this.offsetWidth}px`;
-                        underline.style.left = `${this.offsetLeft}px`;
+                item.addEventListener('mouseenter', function() {  // Add hover effect when mouse enters nav item
+                    if (!this.classList.contains('active-nav')) {  // Only apply if not the active nav item
+                        underline.style.width = `${this.offsetWidth}px`;  // Change underline width to hovered item
+                        underline.style.left = `${this.offsetLeft}px`;  // Move underline under hovered item
                     }
                 });
                 
-                item.addEventListener('mouseleave', function() {
-                    const activeNav = document.querySelector('.active-nav');
-                    if (activeNav && this !== activeNav) {
-                        underline.style.width = `${activeNav.offsetWidth}px`;
-                        underline.style.left = `${activeNav.offsetLeft}px`;
+                item.addEventListener('mouseleave', function() {  // When mouse leaves nav item
+                    const activeNav = document.querySelector('.active-nav');  // Find active nav item
+                    if (activeNav && this !== activeNav) {  // If there is an active item and it's not the current item
+                        underline.style.width = `${activeNav.offsetWidth}px`;  // Reset underline width to active item
+                        underline.style.left = `${activeNav.offsetLeft}px`;  // Reset underline position
                     }
                 });
             });
